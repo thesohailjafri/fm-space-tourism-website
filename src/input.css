@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply overflow-x-hidden;
+}
+
+@layer utilities {
+  :root {
+    @apply text-white;
+  }
+  .ele-contain {
+    @apply mx-auto w-10/12 pt-24 pb-16 text-center md:pt-32 lg:pt-56  lg:text-left;
+  }
+  .my-hr {
+    border-top: 1px solid #383b4b;
+  }
+  .dot {
+    @apply h-2 w-2 rounded-full bg-white bg-opacity-25 md:h-3 md:w-3;
+  }
+  .num-circle {
+    @apply h-10 w-10 rounded-full border text-center font-head text-lg leading-10 md:h-16 md:w-16 md:text-2xl md:leading-[4rem];
+  }
+}
