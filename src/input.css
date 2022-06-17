@@ -10,8 +10,12 @@ html {
   :root {
     @apply text-white;
   }
+
   .ele-contain {
-    @apply mx-auto w-10/12 pt-24 pb-16 text-center md:pt-32 lg:pt-56  lg:text-left;
+    @apply mx-auto w-10/12 grid-cols-2 pt-24 pb-16 text-center md:pt-32  lg:grid lg:pt-56 lg:text-left;
+  }
+  .heading-title {
+    @apply uppercase tracking-widest md:text-left md:text-xl lg:text-2xl;
   }
   .my-hr {
     border-top: 1px solid #383b4b;

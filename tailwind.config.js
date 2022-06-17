@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,js}', './index.html'],
   theme: {
     fontFamily: {
       head: [' "Bellefair", serif'],
@@ -9,6 +9,9 @@ module.exports = {
     },
 
     extend: {
+      borderWidth: {
+        3: '3px',
+      },
       colors: {
         'my-blue': '#D0D6F9',
         'my-black': '#0B0D17',

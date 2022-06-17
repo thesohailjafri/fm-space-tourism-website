@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed&family=Barlow:wght@300&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Space tourism website</title>
+    <!-- js files -->
+    <script src="./dist/menu.js"></script>
+    <script src="./dist/hashchange.js"></script>
+  </head>
+  <body class="" onload="hashBasedSwitch()">
+    <nav
+      class="fixed top-0 flex w-screen items-center justify-between lg:mt-10"
+    >
+      <!-- logo -->
+      <div class="p-4 lg:pl-14">
+        <img class="h-10 bg-contain" src="./assets/shared/logo.svg" alt="" />
+      </div>
+      <!-- hamburder menu -->
+      <div class="cursor-pointer p-5 md:hidden">
+        <img
+          src="./assets/shared/icon-hamburger.svg"
+          alt=""
+          onclick="openMenu()"
+        />
+        <div
+          id="sidebar_menu"
+          class="fixed top-0 right-0 flex h-screen translate-x-full transform items-start gap-x-10 bg-my-blue/5 p-6 backdrop-blur-2xl backdrop-filter transition-transform duration-300 ease-out"
+        >
+          <ul
+            class="mt-20 flex flex-col gap-y-8 font-subhead uppercase tracking-widest"
+          >
+            <li>
+              <a href="#home">
+                <strong class="mr-3">00</strong>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#destination">
+                <strong class="mr-3">01</strong>
+                <span>Destination</span>
+              </a>
+            </li>
+            <li>
+              <a href="#crew">
+                <strong class="mr-3">02</strong>
+                <span>Crew</span>
+              </a>
+            </li>
+            <li>
+              <a href="#technology">
+                <strong class="mr-3">03</strong>
+                <span>Technology</span>
+              </a>
+            </li>
+          </ul>
+          <div>
+            <img
+              onclick="closeMenu()"
+              class="self-center"
+              src="./assets/shared/icon-close.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- line -->
+      <hr class="z-10 hidden grow translate-x-10 transform lg:inline" />
+      <!-- links -->
+      <ul
+        class="hidden items-center gap-x-8 bg-my-blue/5 px-10 font-subhead text-sm uppercase tracking-widest backdrop-blur-2xl backdrop-filter md:flex lg:w-1/2 lg:pl-32 lg:text-base 2xl:gap-x-12"
+      >
+        <a href="#home">
+          <li id="home-link" class="py-10">
+            <strong class="hidden lg:inline">00</strong>
+            <span>Home</span>
+          </li>
+        </a>
+        <a href="#destination">
+          <li id="destination-link" class="py-10">
+            <strong class="hidden lg:inline">00</strong>
+            <span>Destination</span>
+          </li>
+        </a>
+        <a href="#crew">
+          <li id="crew-link" class="py-10">
+            <strong class="hidden lg:inline">00</strong>
+            <span>Crew</span>
+          </li>
+        </a>
+        <a href="#technology">
+          <li id="technology-link" class="py-10">
+            <strong class="hidden lg:inline">00</strong>
+            <span>Technology</span>
+          </li>
+        </a>
+      </ul>
+    </nav>
+
+    <!-- home -->
+    <div
+      id="home"
+      class="min-h-screen w-screen bg-[url('../assets/home/background-home-mobile.jpg')] bg-cover md:bg-[url('../assets/home/background-home-tablet.jpg')] lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
+    >
+      <div class="ele-contain grid-cols-2 lg:grid lg:pt-24">
+        <div class="mx-auto mt-5 max-w-md space-y-2 lg:mt-40 lg:ml-0">
+          <h6
+            class="font-subhead text-base uppercase tracking-widest text-my-blue md:text-xl"
+          >
+            So, you want to travel to
+          </h6>
+          <h1 class="font-head text-[80px] uppercase md:text-[150px]">Space</h1>
+          <p class="text-sm text-my-blue md:text-base lg:text-lg">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <div
+          class="mx-auto mt-24 h-[150px] w-[150px] rounded-full bg-white text-center font-head text-xl uppercase leading-[150px] tracking-wider text-my-black md:h-[242px] md:w-[242px] md:text-3xl md:leading-[242px] lg:mt-56 lg:h-[274px] lg:w-[274px] lg:grow lg:text-4xl lg:leading-[274px]"
+        >
+          Explore
+        </div>
+      </div>
+    </div>
+
+    <!-- destination -->
+    <div
+      id="destination"
+      class="lg:bg-[url('../assets/destination/background-destination-desktop .jpg')] min-h-screen w-screen bg-[url('../assets/destination/background-destination-mobile.jpg')] bg-cover md:bg-[url('../assets/destination/background-destination-tablet.jpg')]"
+    >
+      <div class="ele-contain">
+        <h6 class="heading-title col-span-2 lg:mb-10">
+          <strong class="mr-3 opacity-25">01</strong>
+          <span>pick your destination</span>
+        </h6>
+        <div class="my-8 md:my-12">
+          <img
+            class="mx-auto h-[170px] md:h-[300px] lg:h-[445px]"
+            src="./assets/destination/image-moon.png"
+            A
+            alt=""
+          />
+        </div>
+        <div class="mx-auto space-y-6 md:w-9/12 md:space-y-7">
+          <div
+            class="mx-auto flex max-w-xs justify-start space-x-10 font-subhead text-sm uppercase tracking-widest text-my-blue md:text-base lg:ml-0 lg:text-base"
+          >
+            <span class="border-b-4 pb-3 text-white">Moon</span>
+            <span>Mars</span>
+            <span>Europa</span>
+            <span>Titan</span>
+          </div>
+          <h3 class="font-head text-6xl uppercase md:text-7xl lg:text-8xl">
+            moon
+          </h3>
+          <p class="text-sm text-my-blue md:text-base lg:text-lg">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+          <hr class="my-hr" />
+
+          <div class="grid-cols-2 space-y-6 md:grid md:space-y-0">
+            <div class="space-y-4 uppercase">
+              <span class="font-subhead text-sm tracking-widest text-my-blue"
+                >Avg. distance</span
+              >
+              <h4 class="font-head text-3xl">384,400 km</h4>
+            </div>
+            <div class="space-y-4 uppercase">
+              <span class="font-subhead text-sm tracking-widest text-my-blue"
+                >Est. travel time</span
+              >
+              <h4 class="font-head text-3xl">3 days</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- crew -->
+    <div
+      id="crew"
+      class="min-h-screen w-screen bg-[url('../assets/crew/background-crew-mobile.jpg')] bg-cover"
+    >
+      <div class="ele-contain md:pb-0">
+        <h6 class="heading-title col-span-2">
+          <strong class="mr-3 opacity-25">02</strong>
+          <span>Meet your crew</span>
+        </h6>
+        <div
+          class="col-span-2 mx-auto flex-col-reverse md:mt-14 md:flex md:w-9/12 lg:mt-0 lg:grid lg:w-full lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10"
+        >
+          <div class="grid-col col-start-2 col-end-3 row-start-1 mx-auto mt-8">
+            <img
+              class="mx-auto h-[223px] object-scale-down object-bottom md:h-[572px] lg:h-[712px]"
+              src="./assets/crew/image-douglas-hurley.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-start-1 col-end-2 row-start-1 flex-col-reverse md:flex lg:justify-center"
+          >
+            <hr class="my-hr md:hidden" />
+            <div
+              class="my-8 flex justify-center space-x-4 font-subhead text-sm uppercase tracking-widest text-my-blue lg:mt-20 lg:justify-start"
+            >
+              <span class="dot !bg-opacity-75"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="">
+              <h6
+                class="font-head text-lg uppercase opacity-50 md:text-2xl lg:text-4xl"
+              >
+                Commander
+              </h6>
+              <h4
+                class="mt-2 font-head text-2xl uppercase md:mt-3 md:text-4xl lg:text-6xl"
+              >
+                Douglas Hurley
+              </h4>
+
+              <p
+                class="mt-4 text-sm text-my-blue md:mt-5 md:text-base lg:text-lg"
+              >
+                Douglas Gerald Hurley is an American engineer, former Marine
+                Corps pilot and former NASA astronaut. He launched into space
+                for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- technology -->
+    <div
+      id="technology"
+      class="min-h-screen w-screen bg-[url('../assets/technology/background-technology-mobile.jpg')] bg-cover"
+    >
+      <div class="ele-contain !pb-0">
+        <h6 class="heading-title">
+          <strong class="mr-3 opacity-25">03</strong>
+          <span>Space launch 101</span>
+        </h6>
+      </div>
+      <div class="grid-cols-3 grid-rows-1 lg:grid">
+        <div class="col-start-3 col-end-4 row-start-1">
+          <img
+            class="mt-8 h-44 w-screen object-cover md:h-80 lg:hidden"
+            src="../assets/technology/image-launch-vehicle-landscape.jpg"
+            alt=""
+          />
+          <img
+            class="ml-auto hidden h-[515px] object-cover lg:block"
+            src="./assets/technology/image-launch-vehicle-portrait.jpg"
+            alt=""
+          />
+        </div>
+        <div class="ele-contain col-start-1 col-end-3 row-start-1 !pt-0">
+          <div
+            class="mx-auto md:w-9/12 lg:col-span-2 lg:flex lg:justify-between lg:gap-x-10"
+          >
+            <div
+              class="my-8 flex justify-center space-x-4 font-subhead text-sm uppercase tracking-widest text-my-blue lg:flex-col lg:space-x-0 lg:space-y-5"
+            >
+              <span class="num-circle bg-white text-black">1</span>
+              <span class="num-circle">2</span>
+              <span class="num-circle">3</span>
+            </div>
+            <div class="my-auto">
+              <h6
+                class="font-subhead text-sm uppercase tracking-widest text-my-blue md:text-base"
+              >
+                The terminology...
+              </h6>
+              <h4
+                class="mt-2 font-head text-2xl uppercase md:mt-3 md:text-4xl lg:text-6xl"
+              >
+                Launch vehicle
+              </h4>
+              <p
+                class="mt-4 text-sm text-my-blue md:mt-5 md:text-base lg:text-lg"
+              >
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
