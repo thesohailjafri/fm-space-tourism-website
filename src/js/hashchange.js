@@ -6,6 +6,7 @@ const allHashs = ['home', 'destination', 'crew', 'technology']
 const hashBasedSwitch = () => {
   closeMenu()
   const hashFor = window.location.hash.substring(1)
+
   switch (hashFor) {
     case 'home':
       hashBasedchanges('home')
@@ -29,10 +30,11 @@ const hashBasedchanges = (hash) => {
   /* underline */
   allHashs.forEach((item) => {
     if (item === hash) {
-      document.getElementById(`${item}-link`).classList.add('border-b-3')
-      console.log(hash)
+      document.getElementById(`${item}-link`).classList.add('nav-active')
+      document.getElementById(`${item}-link`).classList.remove('nav-links')
     } else {
-      document.getElementById(`${item}-link`).classList.remove('border-b-3')
+      document.getElementById(`${item}-link`).classList.add('nav-links')
+      document.getElementById(`${item}-link`).classList.remove('nav-active')
     }
   })
 }

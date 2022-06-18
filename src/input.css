@@ -11,6 +11,22 @@ html {
     @apply text-white;
   }
 
+  .nav-active {
+    @apply border-b-3 border-white py-10;
+  }
+
+  .nav-links {
+    @apply border-b-3 border-transparent py-10 transition-all duration-100 ease-out hover:border-white/50;
+  }
+
+  .destination-active {
+    @apply cursor-pointer border-b-3 border-white py-10 pb-3  text-white;
+  }
+
+  .destination-links {
+    @apply cursor-pointer border-b-3 border-transparent py-10 pb-3 transition-all duration-100 ease-out hover:border-white/50;
+  }
+
   .ele-contain {
     @apply mx-auto w-10/12 grid-cols-2 pt-24 pb-16 text-center md:pt-32  lg:grid lg:pt-56 lg:text-left;
   }
@@ -20,10 +36,18 @@ html {
   .my-hr {
     border-top: 1px solid #383b4b;
   }
-  .dot {
-    @apply h-2 w-2 rounded-full bg-white bg-opacity-25 md:h-3 md:w-3;
+
+  .crew-links {
+    @apply h-2 w-2 cursor-pointer rounded-full bg-white bg-opacity-25 transition-all duration-100 ease-out hover:bg-opacity-50 md:h-3 md:w-3;
   }
-  .num-circle {
-    @apply h-10 w-10 rounded-full border text-center font-head text-lg leading-10 md:h-16 md:w-16 md:text-2xl md:leading-[4rem];
+  .crew-active {
+    @apply h-2 w-2 cursor-pointer rounded-full bg-white bg-opacity-75 md:h-3 md:w-3;
+  }
+
+  .technology-links {
+    @apply h-10 w-10 cursor-pointer rounded-full border border-white border-opacity-25 text-center font-head text-lg leading-10 transition-all duration-100 ease-out hover:border-opacity-75 md:h-16 md:w-16 md:text-2xl md:leading-[4rem];
+  }
+  .technology-active {
+    @apply h-10 w-10 cursor-pointer rounded-full border bg-white text-center font-head text-lg leading-10 text-black md:h-16 md:w-16 md:text-2xl md:leading-[4rem];
   }
 }

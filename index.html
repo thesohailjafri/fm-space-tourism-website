@@ -20,8 +20,9 @@
 
     <title>Frontend Mentor | Space tourism website</title>
     <!-- js files -->
-    <script src="./dist/menu.js"></script>
-    <script src="./dist/hashchange.js"></script>
+    <script src="./src/js/menu.js"></script>
+    <script src="./src/js/hashchange.js"></script>
+    <script src="./src/js/contentSwitch.js"></script>
   </head>
   <body class="" onload="hashBasedSwitch()">
     <nav
@@ -87,25 +88,25 @@
         class="hidden items-center gap-x-8 bg-my-blue/5 px-10 font-subhead text-sm uppercase tracking-widest backdrop-blur-2xl backdrop-filter md:flex lg:w-1/2 lg:pl-32 lg:text-base 2xl:gap-x-12"
       >
         <a href="#home">
-          <li id="home-link" class="py-10">
+          <li id="home-link" class="nav-links">
             <strong class="hidden lg:inline">00</strong>
             <span>Home</span>
           </li>
         </a>
         <a href="#destination">
-          <li id="destination-link" class="py-10">
+          <li id="destination-link" class="nav-links">
             <strong class="hidden lg:inline">00</strong>
             <span>Destination</span>
           </li>
         </a>
         <a href="#crew">
-          <li id="crew-link" class="py-10">
+          <li id="crew-link" class="nav-links">
             <strong class="hidden lg:inline">00</strong>
             <span>Crew</span>
           </li>
         </a>
         <a href="#technology">
-          <li id="technology-link" class="py-10">
+          <li id="technology-link" class="nav-links">
             <strong class="hidden lg:inline">00</strong>
             <span>Technology</span>
           </li>
@@ -134,7 +135,7 @@
           </p>
         </div>
         <div
-          class="mx-auto mt-24 h-[150px] w-[150px] rounded-full bg-white text-center font-head text-xl uppercase leading-[150px] tracking-wider text-my-black md:h-[242px] md:w-[242px] md:text-3xl md:leading-[242px] lg:mt-56 lg:h-[274px] lg:w-[274px] lg:grow lg:text-4xl lg:leading-[274px]"
+          class="mx-auto mt-24 grid h-[150px] w-[150px] cursor-pointer place-items-center rounded-full bg-white text-center font-head text-xl uppercase tracking-wider text-my-black shadow-explore-none transition-all duration-150 ease-in hover:shadow-explore-sm md:h-[242px] md:w-[242px] md:text-3xl md:hover:shadow-explore-md lg:mt-56 lg:h-[274px] lg:w-[274px] lg:grow lg:text-4xl lg:hover:shadow-explore-lg"
         >
           Explore
         </div>
@@ -153,25 +154,51 @@
         </h6>
         <div class="my-8 md:my-12">
           <img
+            id="destination-image"
             class="mx-auto h-[170px] md:h-[300px] lg:h-[445px]"
             src="./assets/destination/image-moon.png"
-            A
-            alt=""
+            alt="destination-image"
           />
         </div>
         <div class="mx-auto space-y-6 md:w-9/12 md:space-y-7">
           <div
             class="mx-auto flex max-w-xs justify-start space-x-10 font-subhead text-sm uppercase tracking-widest text-my-blue md:text-base lg:ml-0 lg:text-base"
           >
-            <span class="border-b-4 pb-3 text-white">Moon</span>
-            <span>Mars</span>
-            <span>Europa</span>
-            <span>Titan</span>
+            <span
+              onclick="destinationSwitch(this)"
+              id="destination-Moon"
+              class="destination-active"
+              >Moon</span
+            >
+            <span
+              onclick="destinationSwitch(this)"
+              id="destination-Mars"
+              class="destination-links"
+              >Mars</span
+            >
+            <span
+              onclick="destinationSwitch(this)"
+              id="destination-Europa"
+              class="destination-links"
+              >Europa</span
+            >
+            <span
+              onclick="destinationSwitch(this)"
+              id="destination-Titan"
+              class="destination-links"
+              >Titan</span
+            >
           </div>
-          <h3 class="font-head text-6xl uppercase md:text-7xl lg:text-8xl">
+          <h3
+            id="destination-title"
+            class="font-head text-6xl uppercase md:text-7xl lg:text-8xl"
+          >
             moon
           </h3>
-          <p class="text-sm text-my-blue md:text-base lg:text-lg">
+          <p
+            id="destination-detail"
+            class="text-sm text-my-blue md:text-base lg:text-lg"
+          >
             See our planet as you’ve never seen it before. A perfect relaxing
             trip away to help regain perspective and come back refreshed. While
             you’re there, take in some history by visiting the Luna 2 and Apollo
@@ -184,13 +211,15 @@
               <span class="font-subhead text-sm tracking-widest text-my-blue"
                 >Avg. distance</span
               >
-              <h4 class="font-head text-3xl">384,400 km</h4>
+              <h4 id="destination-distance" class="font-head text-3xl">
+                384,400 km
+              </h4>
             </div>
             <div class="space-y-4 uppercase">
               <span class="font-subhead text-sm tracking-widest text-my-blue"
                 >Est. travel time</span
               >
-              <h4 class="font-head text-3xl">3 days</h4>
+              <h4 id="destination-time" class="font-head text-3xl">3 days</h4>
             </div>
           </div>
         </div>
@@ -212,36 +241,56 @@
         >
           <div class="grid-col col-start-2 col-end-3 row-start-1 mx-auto mt-8">
             <img
+              id="crew-image"
               class="mx-auto h-[223px] object-scale-down object-bottom md:h-[572px] lg:h-[712px]"
               src="./assets/crew/image-douglas-hurley.webp"
               alt=""
             />
           </div>
           <div
-            class="col-start-1 col-end-2 row-start-1 flex-col-reverse md:flex lg:justify-center"
+            class="col-start-1 col-end-2 row-start-1 flex-col-reverse md:flex lg:my-40 lg:justify-center"
           >
             <hr class="my-hr md:hidden" />
             <div
-              class="my-8 flex justify-center space-x-4 font-subhead text-sm uppercase tracking-widest text-my-blue lg:mt-20 lg:justify-start"
+              class="my-8 flex justify-center space-x-4 font-subhead text-sm uppercase tracking-widest text-my-blue lg:mt-auto lg:justify-start"
             >
-              <span class="dot !bg-opacity-75"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+              <span
+                onclick="crewSwitch('commander')"
+                id="crew-commander"
+                class="crew-active"
+              ></span>
+              <span
+                onclick="crewSwitch('engineer')"
+                id="crew-engineer"
+                class="crew-links"
+              ></span>
+              <span
+                onclick="crewSwitch('pilot')"
+                id="crew-pilot"
+                class="crew-links"
+              ></span>
+              <span
+                onclick="crewSwitch('specialist')"
+                id="crew-specialist"
+                class="crew-links"
+              ></span>
             </div>
             <div class="">
               <h6
+                id="crew-title"
                 class="font-head text-lg uppercase opacity-50 md:text-2xl lg:text-4xl"
               >
                 Commander
               </h6>
               <h4
+                id="crew-name"
                 class="mt-2 font-head text-2xl uppercase md:mt-3 md:text-4xl lg:text-6xl"
               >
                 Douglas Hurley
               </h4>
 
               <p
+                id="crew-description"
                 class="mt-4 text-sm text-my-blue md:mt-5 md:text-base lg:text-lg"
               >
                 Douglas Gerald Hurley is an American engineer, former Marine
@@ -268,14 +317,16 @@
       <div class="grid-cols-3 grid-rows-1 lg:grid">
         <div class="col-start-3 col-end-4 row-start-1">
           <img
+            id="technology-image-sm"
             class="mt-8 h-44 w-screen object-cover md:h-80 lg:hidden"
-            src="../assets/technology/image-launch-vehicle-landscape.jpg"
-            alt=""
+            src="./assets/technology/image-launch-vehicle-landscape.jpg"
+            alt="technology-image-sm"
           />
           <img
+            id="technology-image-lg"
             class="ml-auto hidden h-[515px] object-cover lg:block"
             src="./assets/technology/image-launch-vehicle-portrait.jpg"
-            alt=""
+            alt="technology-image-lg"
           />
         </div>
         <div class="ele-contain col-start-1 col-end-3 row-start-1 !pt-0">
@@ -285,22 +336,39 @@
             <div
               class="my-8 flex justify-center space-x-4 font-subhead text-sm uppercase tracking-widest text-my-blue lg:flex-col lg:space-x-0 lg:space-y-5"
             >
-              <span class="num-circle bg-white text-black">1</span>
-              <span class="num-circle">2</span>
-              <span class="num-circle">3</span>
+              <span
+                id="technology-vehicle"
+                onclick="technologySwitch('vehicle')"
+                class="technology-active"
+                >1</span
+              >
+              <span
+                id="technology-capsule"
+                onclick="technologySwitch('capsule')"
+                class="technology-links"
+                >2</span
+              >
+              <span
+                id="technology-spaceport"
+                onclick="technologySwitch('spaceport')"
+                class="technology-links"
+                >3</span
+              >
             </div>
-            <div class="my-auto">
+            <div class="lg:my-20">
               <h6
-                class="font-subhead text-sm uppercase tracking-widest text-my-blue md:text-base"
+                class="font-subhead text-sm uppercase tracking-widest text-my-blue md:text-base lg:text-lg"
               >
                 The terminology...
               </h6>
               <h4
+                id="technology-title"
                 class="mt-2 font-head text-2xl uppercase md:mt-3 md:text-4xl lg:text-6xl"
               >
                 Launch vehicle
               </h4>
               <p
+                id="technology-description"
                 class="mt-4 text-sm text-my-blue md:mt-5 md:text-base lg:text-lg"
               >
                 A launch vehicle or carrier rocket is a rocket-propelled vehicle

@@ -11,10 +11,17 @@ module.exports = {
     extend: {
       borderWidth: {
         3: '3px',
+        170: '170px',
       },
       colors: {
         'my-blue': '#D0D6F9',
         'my-black': '#0B0D17',
+      },
+      boxShadow: {
+        'explore-none': '0px 0px 0px 0px rgba(255,255,255,.12)',
+        'explore-sm': '0px 0px 0px 20px rgba(255,255,255,.12)',
+        'explore-md': '0px 0px 0px 40px rgba(255,255,255,.12)',
+        'explore-lg': '0px 0px 0px 60px rgba(255,255,255,.12)',
       },
       transitionProperty: {
         height: 'height',
