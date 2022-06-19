@@ -27,9 +27,6 @@ module.exports = {
         height: 'height',
         spacing: 'margin, padding',
       },
-      // fontSize: {
-      //   sm: '.938rem',
-      // },
       letterSpacing: {
         wider: '0.1rem',
         widest: '0.2em',
