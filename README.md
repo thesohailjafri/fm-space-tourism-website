@@ -55,16 +55,18 @@ Users should be able to:
  </tr>
  <tr>
     <td>
+
+	    
+	    <img src="./layouts/MobileHome.png" alt="MobileHome" width="50%" >
+<img src="./layouts/MobileDestinationA.jpg" alt="MobileDestinationA" width="50%" >
+<img src="./layouts/MobileCrewA.jpg" alt="MobileCrewA" width="50%" >
+<img src="./layouts/MobileTechnologyA.jpg" alt="MobileTechnologyA" width="50%" >
+</td>
+    <td>
 		<img src="./layouts/TabletHome.png" alt="TabletHome" width="100%" >
 <img src="./layouts/TabletDestinationA.png" alt="TabletDestinationA" width="100%" >
 <img src="./layouts/TabletCrewA.jpg" alt="TabletCrewA" width="100%" >
 <img src="./layouts/TabletTechnologyA.jpg" alt="TabletTechnologyA" width="100%" >
-</td>
-    <td>
-<img src="./layouts/MobileHome.png" alt="MobileHome" width="50%" >
-<img src="./layouts/MobileDestinationA.jpg" alt="MobileDestinationA" width="50%" >
-<img src="./layouts/MobileCrewA.jpg" alt="MobileCrewA" width="50%" >
-<img src="./layouts/MobileTechnologyA.jpg" alt="MobileTechnologyA" width="50%" >
 		</td>
  </tr>
 </table>
