@@ -9,6 +9,9 @@ module.exports = {
     },
 
     extend: {
+      animation: {
+        'spin-slow': 'spin 2.5s linear infinite',
+      },
       borderWidth: {
         3: '3px',
         170: '170px',
@@ -19,8 +22,8 @@ module.exports = {
       },
       boxShadow: {
         'explore-none': '0px 0px 0px 0px rgba(255,255,255,.12)',
-        'explore-sm': '0px 0px 0px 20px rgba(255,255,255,.12)',
-        'explore-md': '0px 0px 0px 40px rgba(255,255,255,.12)',
+        'explore-sm': '0px 0px 0px 30px rgba(255,255,255,.12)',
+        'explore-md': '0px 0px 0px 45px rgba(255,255,255,.12)',
         'explore-lg': '0px 0px 0px 60px rgba(255,255,255,.12)',
       },
       transitionProperty: {

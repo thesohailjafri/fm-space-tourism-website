@@ -48,11 +48,37 @@
 
     <title>Space tourism website | Frontend Mentor</title>
     <!-- js files -->
+    <script src="./src/js/util.js"></script>
     <script src="./src/js/menu.js"></script>
     <script src="./src/js/hashchange.js"></script>
     <script src="./src/js/contentSwitch.js"></script>
   </head>
-  <body class="" onload="hashBasedSwitch()">
+  <body class="" onload="hashBasedSwitch();hideLoader()">
+    <!-- loader -->
+    <div class="loader" id="loader">
+      <div class="relative grid h-40 w-40 animate-spin-slow">
+        <div
+          class="absolute top-0 h-1 w-32 translate-y-20 translate-x-4 transform rounded-lg bg-white"
+        ></div>
+        <div
+          class="absolute top-0 h-1 w-40 translate-y-20 rotate-45 transform rounded-lg bg-white"
+        ></div>
+        <div
+          class="absolute top-0 h-1 w-40 translate-y-20 -rotate-45 transform rounded-lg bg-white"
+        ></div>
+        <div
+          class="absolute top-0 h-1 w-32 translate-y-20 translate-x-4 rotate-90 transform rounded-lg bg-white"
+        ></div>
+        <div
+          class="absolute h-24 w-24 translate-y-8 translate-x-8 rounded-full border-[10px] border-double border-white"
+        ></div>
+        <img
+          class="h-16 w-16 translate-x-12 translate-y-12 rotate-45 transform"
+          src="./assets/shared/logo.svg"
+          alt=""
+        />
+      </div>
+    </div>
     <nav
       class="fixed top-0 flex w-screen items-center justify-between lg:mt-10"
     >

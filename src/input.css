@@ -11,6 +11,14 @@ html {
     @apply text-white;
   }
 
+  .loader {
+    @apply fixed top-0 left-0 z-50 grid h-screen w-screen place-content-center bg-my-black opacity-100 transition-all duration-500 ease-linear;
+  }
+
+  .loader-inner {
+    @apply grid animate-spin-slow grid-cols-2 grid-rows-2 bg-black duration-700;
+  }
+
   .nav-active {
     @apply border-b-3 border-white py-10;
   }

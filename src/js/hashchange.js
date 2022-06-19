@@ -1,5 +1,11 @@
 window.addEventListener('hashchange', () => hashBasedSwitch())
-window.addEventListener('onload', () => hashBasedSwitch())
+
+const hideLoader = () => {
+  document.getElementById('loader').style.opacity = 0
+  setTimeout(() => {
+    document.getElementById('loader').style.display = 'none'
+  }, 500)
+}
 
 const allHashs = ['home', 'destination', 'crew', 'technology']
 
