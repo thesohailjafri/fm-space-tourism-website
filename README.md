@@ -42,11 +42,11 @@ Users should be able to:
 		<img src="./layouts/DesignSystem.png" alt="DesignSystem" width="100%" >
 </td>
     <td>
-    	<img src="./layouts/DesktopHome.jpg" alt="DesktopHome" width="100%" >
-    	<img src="./layouts/DesktopDestinationA.png" alt="DesktopDestinationA" width="100%" >
+    	<img src="./layouts/DesktopHome.jpg" alt="DesktopHome" width="50%" >
+    	<img src="./layouts/DesktopDestinationA.png" alt="DesktopDestinationA" width="50%" >
 
-<img src="./layouts/DesktopCrewA.png" alt="DesktopCrewA" width="100%" >
-<img src="./layouts/DesktopTechnologyA.png" alt="DesktopTechnologyA" width="100%" >
+<img src="./layouts/DesktopCrewA.png" alt="DesktopCrewA" width="50%" >
+<img src="./layouts/DesktopTechnologyA.png" alt="DesktopTechnologyA" width="50%" >
 		</td>
  </tr>
   <tr>
