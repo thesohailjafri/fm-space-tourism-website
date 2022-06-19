@@ -2,7 +2,7 @@
 
 This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-- [Live Demo](https://fm-space-tourism-website.netlify.app/)
+- [Live Demo](https://thesohailjafri.github.io/fm-space-tourism-website/)
 
 ## Table of contents
 
@@ -72,7 +72,7 @@ Users should be able to:
 ### Links
 
 - Solution URL : [https://github.com/thesohailjafri/fm-space-tourism-website](https://github.com/thesohailjafri/fm-space-tourism-website)
-- Live Site URL : [https://fm-space-tourism-website.netlify.app/](https://fm-space-tourism-website.netlify.app/)
+- Live Site URL : [https://thesohailjafri.github.io/fm-space-tourism-website/](https://thesohailjafri.github.io/fm-space-tourism-website/)
 
 ## My process
 
