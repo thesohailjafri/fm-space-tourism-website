@@ -61,10 +61,10 @@ Users should be able to:
 <img src="./layouts/TabletTechnologyA.jpg" alt="TabletTechnologyA" width="100%" >
 </td>
     <td>
-<img src="./layouts/MobileHome.png" alt="MobileHome" width="50%" >
-<img src="./layouts/MobileDestinationA.jpg" alt="MobileDestinationA" width="50%" >
-<img src="./layouts/MobileCrewA.jpg" alt="MobileCrewA" width="50%" >
-<img src="./layouts/MobileTechnologyA.jpg" alt="MobileTechnologyA" width="50%" >
+<img src="./layouts/MobileHome.png" alt="MobileHome" width="40%" >
+<img src="./layouts/MobileDestinationA.jpg" alt="MobileDestinationA" width="40%" >
+<img src="./layouts/MobileCrewA.jpg" alt="MobileCrewA" width="40%" >
+<img src="./layouts/MobileTechnologyA.jpg" alt="MobileTechnologyA" width="40%" >
 		</td>
  </tr>
 </table>
